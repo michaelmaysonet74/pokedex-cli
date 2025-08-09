@@ -1,11 +1,11 @@
 # pokedex-cli
 
-CLI that allows users to fetch a pokemon information by their name or id.
+CLI that allows users to fetch a Pokémon information by their name or id.
 
 ## Getting Started
 
 ```shell
-$ uv run main.py pokemon id 149
+$ uv run src/main.py pokemon id 149
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ Dragonite #0149                                                                   ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
@@ -21,7 +21,7 @@ $ uv run main.py pokemon id 149
 ```
 
 ```shell
-$ uv run main.py pokemon name Miraidon
+$ uv run src/main.py pokemon name Miraidon
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ Miraidon #1008                                                                    ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
