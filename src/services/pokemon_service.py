@@ -1,4 +1,4 @@
-from clients.models.pokemon_response import PokemonResponse, PokemonTypeResponse
+from clients.models.pokemon_response import PokemonResponse
 from clients.pokedex_client import PokedexClient
 from models.pokemon import Pokemon
 from models.pokemon_type import PokemonType
@@ -25,15 +25,10 @@ class PokemonService:
                 entry=json_data["entry"],
                 generation=json_data["generation"],
                 types=self._convert_types(json_data["types"]),
-                weaknesses=self._convert_weaknesses(json_data["weaknesses"]),
+                weaknesses=self._convert_types(json_data["weaknesses"]),
             )
         except:
             return None
 
-    def _convert_types(self, types: PokemonTypeResponse) -> list[PokemonType]:
-        primary_type: str = types["primary"]
-        secondary_type: str | None = types["secondary"]
-        return [PokemonType(t) for t in [primary_type, secondary_type] if t]
-
-    def _convert_weaknesses(self, weaknesses: list[str]) -> list[PokemonType]:
+    def _convert_types(self, weaknesses: list[str]) -> list[PokemonType]:
         return [PokemonType(type_name) for type_name in weaknesses]
