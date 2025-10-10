@@ -9,3 +9,5 @@ class PokemonResponse(TypedDict):
     generation: int
     types: list[str]
     weaknesses: list[str]
+    resistances: list[str]
+    immunities: list[str]

@@ -26,9 +26,11 @@ class PokemonService:
                 generation=json_data["generation"],
                 types=self._convert_types(json_data["types"]),
                 weaknesses=self._convert_types(json_data["weaknesses"]),
+                resistances=self._convert_types(json_data["resistances"]),
+                immunities=self._convert_types(json_data["immunities"]),
             )
         except:
             return None
 
-    def _convert_types(self, weaknesses: list[str]) -> list[PokemonType]:
-        return [PokemonType(type_name) for type_name in weaknesses]
+    def _convert_types(self, types: list[str]) -> list[PokemonType]:
+        return [PokemonType(type_name) for type_name in types]

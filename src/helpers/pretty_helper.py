@@ -20,6 +20,12 @@ def pretty_print(pokemon: Pokemon) -> None:
     table.add_section()
 
     table.add_row(f"[bold]Weaknesses:[/bold] {" | ".join(pokemon.weaknesses)}")
+    table.add_section()
+
+    table.add_row(f"[bold]Resistances:[/bold] {" | ".join(pokemon.resistances)}")
+    table.add_section()
+
+    table.add_row(f"[bold]Immunities:[/bold] {" | ".join(pokemon.immunities)}")
 
     console.print(table)
 
