@@ -16,3 +16,5 @@ class Pokemon(JsonTrait):
     generation: int
     types: list[PokemonType]
     weaknesses: list[PokemonType]
+    resistances: list[PokemonType]
+    immunities: list[PokemonType]
